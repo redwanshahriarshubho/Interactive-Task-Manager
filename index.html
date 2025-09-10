@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto p-4 max-w-2xl">
+        <header class="text-center py-6">
+            <h1 class="text-4xl font-bold text-indigo-700">Task Manager Pro</h1>
+            <p class="text-gray-600 mt-2">Organize your work efficiently</p>
+        </header>
+
+        <main>
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <div class="flex gap-2 mb-4">
+                    <input 
+                        type="text" 
+                        id="taskInput" 
+                        placeholder="Add a new task..." 
+                        class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    >
+                    <button 
+                        id="addTaskBtn"
+                        class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition"
+                    >
+                        Add
+                    </button>
+                </div>
+
+                <div class="flex gap-2 mb-4">
+                    <button class="filter-btn active bg-indigo-100 text-indigo-700 px-4 py-1 rounded-lg" data-filter="all">All</button>
+                    <button class="filter-btn bg-gray-100 text-gray-700 px-4 py-1 rounded-lg" data-filter="active">Active</button>
+                    <button class="filter-btn bg-gray-100 text-gray-700 px-4 py-1 rounded-lg" data-filter="completed">Completed</button>
+                </div>
+            </div>
+
+            <div id="taskList" class="space-y-3">
+                <!-- Tasks dynamically added here -->
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
